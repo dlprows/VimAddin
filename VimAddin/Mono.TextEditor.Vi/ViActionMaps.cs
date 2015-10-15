@@ -288,6 +288,8 @@ namespace VimAddin
 				return MiscActions.Undo;
 			case 'r':
 				return MiscActions.Redo;
+			case 'o':
+				return ViActions.NavigateBack;
 			}
 			return null;
 		}

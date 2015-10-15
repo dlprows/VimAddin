@@ -36,6 +36,11 @@ namespace VimAddin
 {
 	public static class ViActions
 	{
+		public static void NavigateBack (TextEditorData data)
+		{
+			MonoDevelop.Ide.IdeApp.CommandService.DispatchCommand ("MonoDevelop.Ide.Commands.NavigationCommands.NavigateBack");
+		}
+
 		public static void NextSubwordEnd (TextEditorData data)
 		{
 			data.Caret.Offset = ViWordFindStrategy.FindNextSubwordEndOffset (data.Document, data.Caret.Offset);
