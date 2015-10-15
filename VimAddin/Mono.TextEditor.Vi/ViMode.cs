@@ -1360,6 +1360,11 @@ namespace VimAddin
 						Caret.Offset = 0;
 						Reset ("");
 						return;
+					case 'd':
+						MonoDevelop.Ide.IdeApp.CommandService.DispatchCommand ("MonoDevelop.Refactoring.RefactoryCommands.GotoDeclaration");
+
+						Reset ("");
+						return;
 					}
 				}
 				Reset ("Unknown command");

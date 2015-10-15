@@ -286,6 +286,8 @@ namespace VimAddin
 			switch (c) {
 			case 'u':
 				return MiscActions.Undo;
+			case 'r':
+				return MiscActions.Redo;
 			}
 			return null;
 		}
